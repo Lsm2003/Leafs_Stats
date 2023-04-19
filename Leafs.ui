@@ -43,7 +43,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="newInvoiceTab">
        <attribute name="title">
@@ -336,7 +336,7 @@
           </rect>
          </property>
         </widget>
-        <widget class="QLineEdit" name="positionLineEditAddCustomerTab">
+        <widget class="QLineEdit" name="positionLineEditAddPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -372,7 +372,7 @@
           <string>Number</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="numberLineEditAddCustomerTab">
+        <widget class="QLineEdit" name="numberLineEditAddPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -382,7 +382,7 @@
           </rect>
          </property>
         </widget>
-        <widget class="QLineEdit" name="countryLineEditAddCustomerTab">
+        <widget class="QLineEdit" name="countryLineEditAddPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -421,7 +421,7 @@
           <string>*Customer ID will be automatically generated</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="addPlayerButtonAddCustomerTab">
+        <widget class="QPushButton" name="addPlayerButtonAddPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -456,7 +456,7 @@
        <widget class="QGroupBox" name="editCustomerGroupBox">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>20</x>
           <y>0</y>
           <width>811</width>
           <height>521</height>
@@ -491,7 +491,7 @@
           <string>ID</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="idNameLineEditEditCustomerTab">
+        <widget class="QLineEdit" name="idNameLineEditEditPlayerTab">
          <property name="enabled">
           <bool>false</bool>
          </property>
@@ -507,7 +507,7 @@
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QLineEdit" name="emailLineEditEditCustomerTab">
+        <widget class="QLineEdit" name="postionLineEditEditPLayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -527,7 +527,7 @@
           </rect>
          </property>
          <property name="text">
-          <string>Email</string>
+          <string>Position</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_15">
@@ -540,10 +540,10 @@
           </rect>
          </property>
          <property name="text">
-          <string>Address</string>
+          <string>Number</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="addressLineEditEditCustomerTab">
+        <widget class="QLineEdit" name="numberLineEditEditPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -553,7 +553,7 @@
           </rect>
          </property>
         </widget>
-        <widget class="QLineEdit" name="phoneLineEditEditCustomerTab">
+        <widget class="QLineEdit" name="countryLineEditEditPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -573,7 +573,7 @@
           </rect>
          </property>
          <property name="text">
-          <string>Phone</string>
+          <string>Country</string>
          </property>
         </widget>
         <widget class="QPushButton" name="saveChangesButton">
@@ -602,7 +602,7 @@
           <string/>
          </property>
         </widget>
-        <widget class="QComboBox" name="nameComboBoxEditCustomerTab">
+        <widget class="QComboBox" name="nameComboBoxEditPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -651,7 +651,7 @@
           <string>Last Name</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="firstNameLineEditCustomerTab">
+        <widget class="QLineEdit" name="firstNameLineEditPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -661,7 +661,7 @@
           </rect>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lastNameLineEditEditCustomerTab">
+        <widget class="QLineEdit" name="lastNameLineEditEditPlayerTab">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -669,922 +669,6 @@
            <width>260</width>
            <height>20</height>
           </rect>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="adminWidget">
-     <attribute name="title">
-      <string>Admin</string>
-     </attribute>
-     <widget class="QTabWidget" name="adminTab">
-      <property name="geometry">
-       <rect>
-        <x>-4</x>
-        <y>-1</y>
-        <width>801</width>
-        <height>551</height>
-       </rect>
-      </property>
-      <property name="currentIndex">
-       <number>1</number>
-      </property>
-      <widget class="QWidget" name="addProductTab">
-       <attribute name="title">
-        <string>Add Product</string>
-       </attribute>
-       <widget class="QGroupBox" name="addProductGroupBox">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>800</width>
-          <height>525</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QLabel" name="label_19">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Product Name</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_20">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>230</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Vendor Name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="vendorIdLineEditAddProductTab">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>270</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_21">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>270</y>
-           <width>60</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Vendor ID</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="addProductButtonAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>310</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Add Product</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="feedbackLabelAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>360</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="productNameLineEditAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>30</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="vendorNameComboBoxAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>230</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_22">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>70</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Product Genre</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_23">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>110</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Product Developer</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_24">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>150</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Release Date</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_25">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>190</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Price</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="productGenreLineEditAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>70</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="productDeveloperLineEditAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>110</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="productPriceLineEditAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>190</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="placeholderText">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QDateEdit" name="productReleaseDateAddProductTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>150</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_26">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>0</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: red;</string>
-         </property>
-         <property name="text">
-          <string>*Product ID will be automatically generated</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="manageInventoryTab">
-       <attribute name="title">
-        <string>Manage Inventory</string>
-       </attribute>
-       <widget class="QGroupBox" name="manageInventoryGroupBox">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>781</width>
-          <height>521</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QLabel" name="label_38">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Product Name</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_39">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>270</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Vendor Name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="vendorIdLineEditManageInventoryTab">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>310</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_40">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>310</y>
-           <width>60</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Vendor ID</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="saveChangesButtonManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>440</y>
-           <width>261</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Save Changes</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="newProductNameLineEditManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>70</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="newVendorNameComboBoxManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>270</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_41">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>110</y>
-           <width>121</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Product Genre</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_42">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>150</y>
-           <width>131</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Product Developer</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_43">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>190</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Release Date</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_44">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>230</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Price</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="newProductGenreLineEditManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>110</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="newProductDeveloperLineEditManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>150</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="newProductPriceLineEditManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>230</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="placeholderText">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QDateEdit" name="newProductReleaseDateManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>190</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_45">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>0</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: red;</string>
-         </property>
-         <property name="text">
-          <string>*Product or Vendor ID cannot be modified</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_31">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>70</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Product Name</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="productNameComboBoxEditInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>30</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_46">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>390</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Current Inventory</string>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="quantitySpinBoxManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>390</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="cursor">
-          <cursorShape>UpArrowCursor</cursorShape>
-         </property>
-         <property name="maximum">
-          <number>999999999</number>
-         </property>
-         <property name="displayIntegerBase">
-          <number>10</number>
-         </property>
-        </widget>
-        <widget class="QLabel" name="feedbackLabelManageInventoryTab">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>500</y>
-           <width>261</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_47">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>350</y>
-           <width>60</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Product ID</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="productIdLineEditManageInventoryTab">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>350</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="addVendorTab">
-       <attribute name="title">
-        <string>Add Vendor</string>
-       </attribute>
-       <widget class="QGroupBox" name="addVendorGroupBox">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>781</width>
-          <height>521</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QLabel" name="label_27">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Vendor Name</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="addVendorButtonAddVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>70</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Add Vendor</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="feedbackLabelAddVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>120</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="vendorNameLineEditAddVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>30</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_34">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>0</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: red;</string>
-         </property>
-         <property name="text">
-          <string>*Vendor ID will be automatically generated</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="editVendorTab">
-       <attribute name="title">
-        <string>Edit Vendor</string>
-       </attribute>
-       <widget class="QGroupBox" name="editVendorGroupBox">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>781</width>
-          <height>521</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QLabel" name="label_28">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Vendor Name</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="saveChangesButtonEditVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>150</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Save Changes</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="feedbackLabelEditVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>200</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_35">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>0</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: red;</string>
-         </property>
-         <property name="text">
-          <string>*Vendor ID cannot be changed</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_36">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>110</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Vendor ID</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="vendorIdLineEditEditVendorTab">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>110</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="vendorNameComboBoxEditVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>30</y>
-           <width>261</width>
-           <height>22</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_37">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>70</y>
-           <width>101</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>New Vendor Name</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="newVendorNameLineEditEditVendorTab">
-         <property name="geometry">
-          <rect>
-           <x>120</x>
-           <y>70</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="shipmentsTab">
-       <attribute name="title">
-        <string>Shipments</string>
-       </attribute>
-       <widget class="QGroupBox" name="shipmentsGroupBox">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>781</width>
-          <height>511</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QLabel" name="label_29">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>60</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Product</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="submitButtonShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>150</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Submit</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="productComboBoxShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>30</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="productSpinBoxShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>70</y>
-           <width>41</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="addProductButtonShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>150</x>
-           <y>70</y>
-           <width>200</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Add Product To Shipment</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="removeProductButtonShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>150</x>
-           <y>110</y>
-           <width>200</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Remove Product From Shipment</string>
-         </property>
-        </widget>
-        <widget class="QTableWidget" name="shipmentListTableWidgetShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>390</x>
-           <y>30</y>
-           <width>400</width>
-           <height>400</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="feedbackLabelShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>240</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_30">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>70</y>
-           <width>60</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Quantity</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="randomShipmentButtonShipmentsTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>190</y>
-           <width>261</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Random Shipment</string>
          </property>
         </widget>
        </widget>
