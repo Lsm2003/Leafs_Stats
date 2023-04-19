@@ -136,16 +136,6 @@
           </rect>
          </property>
         </widget>
-        <widget class="QTableWidget" name="invoiceListTableWidgetNewInvoiceTab">
-         <property name="geometry">
-          <rect>
-           <x>390</x>
-           <y>30</y>
-           <width>400</width>
-           <height>400</height>
-          </rect>
-         </property>
-        </widget>
         <widget class="QLabel" name="feedbackLabelNewInvoiceTab">
          <property name="geometry">
           <rect>
@@ -645,22 +635,12 @@
        </property>
        <item>
         <property name="text">
-         <string>Inventory</string>
+         <string>Players</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Out Of Stock</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Vendors</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Customers</string>
+         <string>Stats</string>
         </property>
        </item>
       </widget>

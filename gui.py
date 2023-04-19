@@ -12,6 +12,7 @@ class MainWindow(QMainWindow):
         self.AddPlayerWidgetSetup()
         self.editPlayerWidgetSetup()
         self.updateStatsWidgetSetup()
+        self.viewWidgetSetup()
 
 
 # Add player ------------------------------------------------------
@@ -113,6 +114,42 @@ class MainWindow(QMainWindow):
         assists = self.AssistsLineEditUpdateStatsTab.text()
         points = self.pointsLineEditUpdateStatsTab.text()
         updateStats(id, goals, assists, points)
+
+
+
+# View tab ---------------------------------------------------------------
+
+    def viewWidgetSetup(self):
+        self.viewSelectionComboBoxViewTab = self.findChild(QComboBox, 'viewSelectionComboBoxViewTab')
+        self.viewTableWidgetViewTab = self.findChild(QTableWidget, 'viewTableWidgetViewTab')
+        colNames, data = getAllStats()
+        self.displayInView(colNames, data)
+        self.viewSelectionComboBoxViewTab.currentIndexChanged.connect(self.viewSelectionComboBoxViewTabCurrentIndexChangedHandler)
+
+
+    def viewSelectionComboBoxViewTabCurrentIndexChangedHandler(self):
+        self.viewTableWidgetViewTab.clear()
+        currently = self.viewSelectionComboBoxViewTab.currentText()
+        if currently == 'Players':
+            colNames, data = getAllPlayers()
+        elif currently == 'Stats':
+            colNames, data = getAllStats()
+        self.displayInView(colNames, data)
+
+
+    def displayInView(self, columns, rows):
+        try:
+            self.viewTableWidgetViewTab.setRowCount(len(rows))
+            self.viewTableWidgetViewTab.setColumnCount(len(columns))
+            for i in range(len(rows)):
+                row = rows[i]
+                for j in range(len(row)):
+                    self.viewTableWidgetViewTab.setItem(i, j, QTableWidgetItem(str(row[j])))
+            for i in range(self.viewTableWidgetViewTab.columnCount()):
+                self.viewTableWidgetViewTab.setHorizontalHeaderItem(i, QTableWidgetItem(f'{columns[i]}'))
+        except Exception as e:
+            print(e)
+
 
 
 

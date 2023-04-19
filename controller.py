@@ -35,3 +35,13 @@ def getStats():
 def updateStats(id, goals, assists, points):
     sql_query = f"UPDATE leafs.stats SET goals = {goals}, assists = {assists}, points = {points} WHERE player_id = {id}"
     ExecuteAndCommit(sql_query)
+
+def getAllStats():
+    sql_query = f"SELECT stats.player_id, stats.player_name, stats.goals, stats.assists, stats.points FROM leafs.stats"
+    return ExecuteAndReturn(sql_query)
+
+def getAllPlayers():
+    sql_query = f"SELECT players.player_id AS 'ID', players.first_name AS 'First Name', players.last_name AS 'Last Name', players.position AS 'Position', players.number AS 'Number', players.country AS 'country' FROM leafs.players;"
+    return ExecuteAndReturn(sql_query)
+
+print(getAllPlayers())
