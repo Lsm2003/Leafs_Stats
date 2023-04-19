@@ -10,6 +10,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         uic.loadUi('Leafs.ui', self)
         self.AddPlayerWidgetSetup()
+        self.editPlayerWidgetSetup()
 
 
 # Add player ------------------------------------------------------
@@ -49,13 +50,16 @@ class MainWindow(QMainWindow):
 
 
     def nameComboBoxEditPlayerTabCurrentIndexHandler(self):
-        row = self.nameComboBoxEditPlayerTab.currentData()
-        self.idNameLineEditEditPlayerTab.setText(str(row[0]))
-        self.firstNameLineEditPlayerTab.setText(row[1])
-        self.lastNameLineEditEditPlayerTab.setText(row[2])
-        self.postionLineEditEditPLayerTab.setText(row[3])
-        self.numberLineEditEditPlayerTab.setText(row[4])
-        self.countryLineEditEditPlayerTab.setText(row(5))
+        try:
+            row = self.nameComboBoxEditPlayerTab.currentData()
+            self.idNameLineEditEditPlayerTab.setText(str(row[0]))
+            self.firstNameLineEditPlayerTab.setText(row[1])
+            self.lastNameLineEditEditPlayerTab.setText(row[2])
+            self.postionLineEditEditPLayerTab.setText(row[3])
+            self.numberLineEditEditPlayerTab.setText(row[4])
+            self.countryLineEditEditPlayerTab.setText(row[5])
+        except Exception as e:
+            print(e)
 
 
     def saveChangesButtonClickHandler(self):

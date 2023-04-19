@@ -33,7 +33,7 @@
      <widget class="QTabWidget" name="posTab">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>0</y>
         <width>800</width>
         <height>525</height>
@@ -408,8 +408,8 @@
         <widget class="QLabel" name="label_6">
          <property name="geometry">
           <rect>
-           <x>340</x>
-           <y>400</y>
+           <x>20</x>
+           <y>310</y>
            <width>261</width>
            <height>20</height>
           </rect>
@@ -418,7 +418,7 @@
           <string notr="true">color: red;</string>
          </property>
          <property name="text">
-          <string>*Customer ID will be automatically generated</string>
+          <string>PLayer ID will be automatically generated</string>
          </property>
         </widget>
         <widget class="QPushButton" name="addPlayerButtonAddPlayerTab">
@@ -453,7 +453,7 @@
        <attribute name="title">
         <string>Edit Player</string>
        </attribute>
-       <widget class="QGroupBox" name="editCustomerGroupBox">
+       <widget class="QGroupBox" name="editPlayerGroupBox">
         <property name="geometry">
          <rect>
           <x>20</x>
