@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):
         self.numberLineEditAddPlayerTab = self.findChild(QLineEdit, 'numberLineEditAddPlayerTab')
         self.countryLineEditAddPlayerTab = self.findChild(QLineEdit, 'countryLineEditAddPlayerTab')
         self.addPlayerButtonAddPlayerTab = self.findChild(QPushButton, 'addPlayerButtonAddPlayerTab')
+        self.addPlayerButtonAddPlayerTab.clicked.connect(self.addPlayerButtonAddPlayerTabClickHandler)
 
 
     def addPlayerButtonAddPlayerTabClickHandler(self):
@@ -28,7 +29,7 @@ class MainWindow(QMainWindow):
         postion = self.positionLineEditAddPlayerTab.text()
         number = self.numberLineEditAddPlayerTab.text()
         country = self.countryLineEditAddPlayerTab.text()
-        addplayer(player_lname, player_fname, postion, number, country)
+        addplayer(player_fname, player_lname, postion, number, country)
 
 # Edit Player ------------------------------------------------------
     def editPlayerWidgetSetup(self):
@@ -49,7 +50,7 @@ class MainWindow(QMainWindow):
         self.lastNameLineEditEditPlayerTab.setText(players[0][3])
 
         for row in players:
-            self.nameComboBoxEditPlayerTab.addItem(str(row[1]), userData=[row[1], row[0], row[2], row[3], row[4], row[5], row[6]])
+            self.nameComboBoxEditPlayerTab.addItem(str(row[1]), userData=[row[0], row[1], row[2], row[3], row[4], row[5]])
         self.nameComboBoxEditPlayerTab.currentIndexChanged.connect(self.nameComboBoxEditPlayerTabCurrentIndexHandler)
 
 
@@ -57,9 +58,14 @@ class MainWindow(QMainWindow):
         try:
             row = self.nameComboBoxEditPlayerTab.currentData()
             self.idNameLineEditEditPlayerTab.setText(str(row[0]))
-            self.lastNameLineEditEditPlayerTab.setText(row[1])
+            self.lastNameLineEditEditPlayerTab.setText(row[2])
 
         except Exception as e:
             print(e)
 
 
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    app.exec()
