@@ -67,6 +67,14 @@ class MainWindow(QMainWindow):
             print(e)
 
 
+    def editPlayerComboBoxRefresh(self):
+        self.nameComboBoxEditPlayerTab.clear()
+        players = getplayers()
+        for row in players:
+            self.nameComboBoxEditPlayerTab.addItem(str(row[1]), userData=[row[0], row[1], row[2], row[3], row[4], row[5]])
+        self.nameComboBoxEditPlayerTab.currentIndexChanged.connect(self.nameComboBoxEditPlayerTabCurrentIndexHandler)
+
+
     def saveChangesButtonClickHandler(self):
         id = self.idNameLineEditEditPlayerTab.text()
         fname = self.firstNameLineEditPlayerTab.text()
@@ -75,6 +83,8 @@ class MainWindow(QMainWindow):
         number = self.numberLineEditEditPlayerTab.text()
         country = self.countryLineEditEditPlayerTab.text()
         updateplayer(id, fname, lname, position, number, country)
+        updatePlayerInStats(id, lname)
+
 
     def removePlayerEditPlayerTabButtonClickHandler(self):
         id = self.idNameLineEditEditPlayerTab.text()
