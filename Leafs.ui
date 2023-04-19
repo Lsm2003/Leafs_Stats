@@ -43,7 +43,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="newInvoiceTab">
        <attribute name="title">
@@ -87,44 +87,6 @@
           <string>Goals</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="goalsLineEditUpdateStatsTab">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>70</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="AssistsLineEditUpdateStatsTab">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>110</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_9">
          <property name="geometry">
           <rect>
@@ -151,17 +113,17 @@
           <string>Points</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="purchaseButtonNewInvoiceTab">
+        <widget class="QPushButton" name="updateButtonEditStatsTab">
          <property name="geometry">
           <rect>
            <x>90</x>
-           <y>250</y>
+           <y>200</y>
            <width>260</width>
-           <height>20</height>
+           <height>41</height>
           </rect>
          </property>
          <property name="text">
-          <string>Purchase</string>
+          <string>Update!</string>
          </property>
         </widget>
         <widget class="QComboBox" name="nameComboBoxUpdateStatsTab">
@@ -174,42 +136,6 @@
           </rect>
          </property>
         </widget>
-        <widget class="QSpinBox" name="productNumberSpinBoxNewInvoiceTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>190</y>
-           <width>40</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="addProductButtonNewInvoiceTab">
-         <property name="geometry">
-          <rect>
-           <x>150</x>
-           <y>190</y>
-           <width>200</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Add Product To Invoice</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="removeProductButtonNewInvoiceTab">
-         <property name="geometry">
-          <rect>
-           <x>150</x>
-           <y>220</y>
-           <width>200</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Remove Product From Invoice</string>
-         </property>
-        </widget>
         <widget class="QTableWidget" name="invoiceListTableWidgetNewInvoiceTab">
          <property name="geometry">
           <rect>
@@ -218,35 +144,6 @@
            <width>400</width>
            <height>400</height>
           </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_11">
-         <property name="geometry">
-          <rect>
-           <x>310</x>
-           <y>460</y>
-           <width>70</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Invoice Total</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="invoiceTotalLineEditNewInvoiceTab">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>390</x>
-           <y>460</y>
-           <width>390</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
          </property>
         </widget>
         <widget class="QLabel" name="feedbackLabelNewInvoiceTab">
@@ -262,11 +159,44 @@
           <string/>
          </property>
         </widget>
-        <widget class="QLineEdit" name="firstNameLineEditAddPlayerTab_2">
+        <widget class="QLineEdit" name="pointsLineEditUpdateStatsTab">
          <property name="geometry">
           <rect>
            <x>90</x>
            <y>150</y>
+           <width>260</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="AssistsLineEditUpdateStatsTab">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>110</y>
+           <width>260</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="goalsLineEditUpdateStatsTab">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>70</y>
+           <width>260</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="idLineEditUpdateStatsTab">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>370</y>
            <width>260</width>
            <height>20</height>
           </rect>

@@ -5,8 +5,8 @@ def addToPlayer(fname, lname, position, number, country):
     ExecuteAndCommit(sql_query)
 
 def getplayers():
-    sql = f"SELECT players.player_id, players.first_name, players.last_name, players.position, players.number, country FROM leafs.players"
-    rows = ExecuteAndReturn(sql)[1]
+    sql_query = f"SELECT players.player_id, players.first_name, players.last_name, players.position, players.number, country FROM leafs.players"
+    rows = ExecuteAndReturn(sql_query)[1]
     return rows
 
 def updateplayer(id, fname, lname, position, number, country):
@@ -25,4 +25,13 @@ def deleteFromPlayer(id):
 
 def deleteFromStats(id):
     sql_query = f"DELETE FROM leafs.stats WHERE player_id = {id}"
+    ExecuteAndCommit(sql_query)
+
+def getStats():
+    sql_query = f"SELECT stats.player_id, stats.player_name, stats.goals, stats.assists, stats.points FROM leafs.stats"
+    rows = ExecuteAndReturn(sql_query)[1]
+    return rows
+
+def updateStats(id, goals, assists, points):
+    sql_query = f"UPDATE leafs.stats SET goals = {goals}, assists = {assists}, points = {points} WHERE player_id = {id}"
     ExecuteAndCommit(sql_query)

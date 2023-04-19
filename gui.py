@@ -11,6 +11,7 @@ class MainWindow(QMainWindow):
         uic.loadUi('Leafs.ui', self)
         self.AddPlayerWidgetSetup()
         self.editPlayerWidgetSetup()
+        self.updateStatsWidgetSetup()
 
 
 # Add player ------------------------------------------------------
@@ -80,6 +81,38 @@ class MainWindow(QMainWindow):
         deleteFromPlayer(id)
 
 
+# Update Stats -----------------------------------------------------
+
+    def updateStatsWidgetSetup(self):
+        self.nameComboBoxUpdateStatsTab = self.findChild(QComboBox, 'nameComboBoxUpdateStatsTab')
+        self.goalsLineEditUpdateStatsTab = self.findChild(QLineEdit, 'goalsLineEditUpdateStatsTab')
+        self.AssistsLineEditUpdateStatsTab = self.findChild(QLineEdit, 'AssistsLineEditUpdateStatsTab')
+        self.pointsLineEditUpdateStatsTab = self.findChild(QLineEdit, 'pointsLineEditUpdateStatsTab')
+        self.idLineEditUpdateStatsTab = self.findChild(QLineEdit, 'idLineEditUpdateStatsTab')
+        self.updateButtonEditStatsTab = self.findChild(QPushButton, 'updateButtonEditStatsTab')
+        self.updateButtonEditStatsTab.clicked.connect(self.updateButtonEditStatsTabClickHandler)
+        stats = getStats()
+        for row in stats:
+            self.nameComboBoxUpdateStatsTab.addItem(str(row[1]), userData=[row[0], row[1], row[2], row[3], row[4]])
+        self.nameComboBoxUpdateStatsTab.currentIndexChanged.connect(self.nameComboBoxUpdateStatsTabCurrentIndexHandler)
+
+    def nameComboBoxUpdateStatsTabCurrentIndexHandler(self):
+        try:
+            row = self.nameComboBoxUpdateStatsTab.currentData()
+            self.idLineEditUpdateStatsTab.setText(str(row[0]))
+            self.goalsLineEditUpdateStatsTab.setText(row[2])
+            self.AssistsLineEditUpdateStatsTab.setText(row[3])
+            self.pointsLineEditUpdateStatsTab.setText(row[4])
+        except Exception as e:
+            print(e)
+
+
+    def updateButtonEditStatsTabClickHandler(self):
+        id = self.idLineEditUpdateStatsTab.text()
+        goals = self.goalsLineEditUpdateStatsTab.text()
+        assists = self.AssistsLineEditUpdateStatsTab.text()
+        points = self.pointsLineEditUpdateStatsTab.text()
+        updateStats(id, goals, assists, points)
 
 
 
