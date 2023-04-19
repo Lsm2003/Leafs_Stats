@@ -30,7 +30,8 @@ class MainWindow(QMainWindow):
         postion = self.positionLineEditAddPlayerTab.text()
         number = self.numberLineEditAddPlayerTab.text()
         country = self.countryLineEditAddPlayerTab.text()
-        addplayer(player_fname, player_lname, postion, number, country)
+        addToPlayer(player_fname, player_lname, postion, number, country)
+        addToStats(player_lname)
 
 # Edit Player ------------------------------------------------------
     def editPlayerWidgetSetup(self):
@@ -41,8 +42,10 @@ class MainWindow(QMainWindow):
         self.countryLineEditEditPlayerTab = self.findChild(QLineEdit, 'countryLineEditEditPlayerTab')
         self.firstNameLineEditPlayerTab = self.findChild(QLineEdit, 'firstNameLineEditPlayerTab')
         self.lastNameLineEditEditPlayerTab = self.findChild(QLineEdit, 'lastNameLineEditEditPlayerTab')
+        self.removePlayerEditPlayerTabButton = self.findChild(QPushButton, 'removePlayerEditPlayerTabButton')
         self.saveChangesButton = self.findChild(QPushButton, 'saveChangesButton')
         self.saveChangesButton.clicked.connect(self.saveChangesButtonClickHandler)
+        self.removePlayerEditPlayerTabButton.clicked.connect(self.removePlayerEditPlayerTabButtonClickHandler)
         players = getplayers()
         for row in players:
             self.nameComboBoxEditPlayerTab.addItem(str(row[2]), userData=[row[0], row[1], row[2], row[3], row[4], row[5]])
@@ -70,6 +73,14 @@ class MainWindow(QMainWindow):
         number = self.numberLineEditEditPlayerTab.text()
         country = self.countryLineEditEditPlayerTab.text()
         updateplayer(id, fname, lname, position, number, country)
+
+    def removePlayerEditPlayerTabButtonClickHandler(self):
+        id = self.idNameLineEditEditPlayerTab.text()
+        deleteFromStats(id)
+        deleteFromPlayer(id)
+
+
+
 
 
 if __name__ == '__main__':

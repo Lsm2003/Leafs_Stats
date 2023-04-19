@@ -84,12 +84,12 @@
           </rect>
          </property>
          <property name="text">
-          <string>Email</string>
+          <string>Goals</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="emailLineEditNewInvoiceTab">
+        <widget class="QLineEdit" name="goalsLineEditUpdateStatsTab">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="geometry">
           <rect>
@@ -109,9 +109,9 @@
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QLineEdit" name="idLineEditNewInvoiceTab">
+        <widget class="QLineEdit" name="AssistsLineEditUpdateStatsTab">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="geometry">
           <rect>
@@ -135,7 +135,7 @@
           </rect>
          </property>
          <property name="text">
-          <string>ID</string>
+          <string>Assists</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_10">
@@ -148,7 +148,7 @@
           </rect>
          </property>
          <property name="text">
-          <string>Product</string>
+          <string>Points</string>
          </property>
         </widget>
         <widget class="QPushButton" name="purchaseButtonNewInvoiceTab">
@@ -164,21 +164,11 @@
           <string>Purchase</string>
          </property>
         </widget>
-        <widget class="QComboBox" name="nameComboBoxNewInvoiceTab">
+        <widget class="QComboBox" name="nameComboBoxUpdateStatsTab">
          <property name="geometry">
           <rect>
            <x>90</x>
            <y>30</y>
-           <width>260</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="productComboBoxNewInvoiceTab">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>150</y>
            <width>260</width>
            <height>20</height>
           </rect>
@@ -270,6 +260,16 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="firstNameLineEditAddPlayerTab_2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>150</y>
+           <width>260</width>
+           <height>20</height>
+          </rect>
          </property>
         </widget>
        </widget>
@@ -669,6 +669,19 @@
            <width>260</width>
            <height>20</height>
           </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="removePlayerEditPlayerTabButton">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>360</y>
+           <width>261</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Remove Player</string>
          </property>
         </widget>
        </widget>
