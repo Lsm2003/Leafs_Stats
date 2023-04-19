@@ -41,27 +41,31 @@ class MainWindow(QMainWindow):
         self.firstNameLineEditPlayerTab = self.findChild(QLineEdit, 'firstNameLineEditPlayerTab')
         self.lastNameLineEditEditPlayerTab = self.findChild(QLineEdit, 'lastNameLineEditEditPlayerTab')
         self.saveChangesButton = self.findChild(QPushButton, 'saveChangesButton')
+        self.saveChangesButton.clicked.connect(self.saveChangesButtonClickHandler)
         players = getplayers()
-        self.idNameLineEditEditPlayerTab.setText(str(players[0][0]))
-        self.postionLineEditEditPLayerTab.setText(players[0][4])
-        self.numberLineEditEditPlayerTab.setText(players[0][5])
-        self.countryLineEditEditPlayerTab.setText(players[0][6])
-        self.firstNameLineEditPlayerTab.setText(players[0][2])
-        self.lastNameLineEditEditPlayerTab.setText(players[0][3])
-
         for row in players:
-            self.nameComboBoxEditPlayerTab.addItem(str(row[1]), userData=[row[0], row[1], row[2], row[3], row[4], row[5]])
+            self.nameComboBoxEditPlayerTab.addItem(str(row[2]), userData=[row[0], row[1], row[2], row[3], row[4], row[5]])
         self.nameComboBoxEditPlayerTab.currentIndexChanged.connect(self.nameComboBoxEditPlayerTabCurrentIndexHandler)
 
 
     def nameComboBoxEditPlayerTabCurrentIndexHandler(self):
-        try:
-            row = self.nameComboBoxEditPlayerTab.currentData()
-            self.idNameLineEditEditPlayerTab.setText(str(row[0]))
-            self.lastNameLineEditEditPlayerTab.setText(row[2])
+        row = self.nameComboBoxEditPlayerTab.currentData()
+        self.idNameLineEditEditPlayerTab.setText(str(row[0]))
+        self.firstNameLineEditPlayerTab.setText(row[1])
+        self.lastNameLineEditEditPlayerTab.setText(row[2])
+        self.postionLineEditEditPLayerTab.setText(row[3])
+        self.numberLineEditEditPlayerTab.setText(row[4])
+        self.countryLineEditEditPlayerTab.setText(row(5))
 
-        except Exception as e:
-            print(e)
+
+    def saveChangesButtonClickHandler(self):
+        id = self.idNameLineEditEditPlayerTab.text()
+        fname = self.firstNameLineEditPlayerTab.text()
+        lname = self.lastNameLineEditEditPlayerTab.text()
+        position = self.postionLineEditEditPLayerTab.text()
+        number = self.numberLineEditEditPlayerTab.text()
+        country = self.countryLineEditEditPlayerTab.text()
+        updateplayer(id, fname, lname, position, number, country)
 
 
 if __name__ == '__main__':
