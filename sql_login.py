@@ -1,2 +1,2 @@
-password = 'root'
-user ='root'
+password = 'x'
+user ='x'
